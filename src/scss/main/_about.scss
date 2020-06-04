@@ -1,0 +1,83 @@
+.about {
+    position: relative;
+    z-index: 1; 
+    padding: 6.2rem 0 5rem 0;
+    background: $white;
+    line-height: 2rem;
+
+
+    //img, h2, p
+    h2, p {
+        margin-bottom: 2rem;
+    }
+    
+
+    //h2
+    h2 {
+        font-size: 1.2rem;
+    }   
+
+    //p
+    p {
+        text-align: left;
+    }   
+    
+
+    // ---------- skills ----------------------------------------------
+                    .skills {
+                        background: $white;
+
+                        //skill 
+                        .skill {            
+                            width: 90%;
+                        }
+
+                        //skill-name
+                        .skill-name {
+                            margin: 20px 0;
+                        }
+
+                        //skill-bar
+                        .skill-bar {
+                            height: 3px;
+                            background:$gray-400;
+                            border-radius: 8px;
+                        }
+
+                        //skill-per
+                        .skill-per {
+                            height: 3px;
+                            background: $primary;
+                            border-radius: 8px;
+                            width: 40%;
+                            position: relative;
+                            transition: 3s ease;
+
+                            //skill-per::before
+                            &::before {
+                                content: attr(data-text);
+                                position: absolute;
+                                padding: 0px 6px;
+                                background-color:  $primary;
+                                border: 1px solid  $primary;
+                                color: $white;
+                                border-radius: 8px;
+                                top: -42px;
+                                right: 0;
+                                transform: translateX(50%);
+                            }
+
+                            //skill-per::after
+                            &::after {
+                                content: '';
+                                position: absolute;
+                                width: 10px;
+                                height: 10px;
+                                background-color: $primary;
+                                top: -14px;
+                                right: 0;
+                                transform: translateX(50%) rotate(45deg);
+                            }
+                        }
+                    }
+}

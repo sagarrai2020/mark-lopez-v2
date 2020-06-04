@@ -1,0 +1,89 @@
+.testimonials {
+    padding: 6.2rem 0;
+    background: $white;
+    text-align: center;
+
+    //h1
+    h1 {      
+        color: rgb(255, 166, 0);
+    
+        //h1::after
+        &::after {
+            margin: 15px auto;
+            background: rgb(255, 166, 0);   
+        }
+    }
+
+
+    // ---------- owl carousel -------------------------------
+
+                    .owl-dots {
+                        padding-top: 3.5rem;
+
+                        //owl-dot span 
+                        .owl-dot span {
+                            width: 30px;
+                            height: 20px;
+                            transition: all 0.5s linear;
+                            //small screen (from 992px to below)
+                            @media  only screen and (max-width: 992px) {
+                                width: 10px;
+                                height: 10px;
+                            }
+                        }
+
+                        //owl-dot:active span
+                        .owl-dot.active span {
+                            width: 20px;
+                            height: 20px;
+                            background: rgb(255, 166, 0);
+                            //small screen (from 992px to below)
+                            @media  only screen and (max-width: 992px) {
+                                width: 10px;
+                                height: 10px;
+                            }
+                        }
+
+                        //owl-dot:focus
+                        .owl-dot:focus {
+                            outline: 0;
+                        }
+                        
+                    }
+             
+    // ---------- card ---------------------------------------
+    
+                    .card {
+                        margin: 0 0.5rem;
+                        align-items: center;
+                        background: $light;
+
+                        //card:hover
+                        &:hover {
+                            background: $white;
+                        }
+
+                        //img
+                        img {
+                            width: 100px;
+                            height: 100px;
+                            margin: 0.7rem 0 1.5rem 0;
+                        }
+
+                        .card-text {
+                            line-height: 1.5rem;
+                        }
+
+                        //right double quote
+                        .rightquote, .leftquote {
+                            color: rgb(255, 166, 0);
+                        }
+
+                        //h3
+                        h2 {
+                            font-size: 1rem;
+                            color: rgb(255, 166, 0);
+                        }         
+                    }
+}
+

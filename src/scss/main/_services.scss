@@ -1,0 +1,79 @@
+.services {
+    padding: 6.2rem 0;
+    background: linear-gradient(90deg, $gray-200, #fff);
+    text-align: center;
+    
+    //h1::after
+    h1::after {
+        margin: 15px auto;
+    }
+    
+    //p
+    p {
+        margin-bottom: 3.5rem;
+        line-height: 2rem;
+    }
+
+
+    // ------- owl-carousel ----------------------------------
+    
+                    .owl-dots {
+                        padding-top: 3.5rem;
+                        
+                        //owl-dot span 
+                        .owl-dot span {
+                            width: 30px;
+                            height: 20px;
+                            transition: all 0.5s linear;
+                            //small screen (from 992px to below)
+                            @media  only screen and (max-width: 992px) {
+                                width: 10px;
+                                height: 10px;
+                            }
+                        }
+
+                        //owl-dot:active span
+                        .owl-dot.active span {
+                            width: 20px;
+                            height: 20px;
+                            background: $primary;
+                            //small screen (from 992px to below)
+                            @media  only screen and (max-width: 992px) {
+                                width: 10px;
+                                height: 10px;
+                            }
+                        }
+
+                        //owl-dot:focus
+                        .owl-dot:focus {
+                            outline: 0;
+                        }
+                    }
+
+    // ------- Card ------------------------------------------
+
+                    .card {
+                        padding: 4.5rem 1rem;
+                        margin: 0 0.5rem;
+                        text-align: center;
+                        background: $white;
+
+                        //card:hover
+                        &:hover {
+                            background:  $light;
+                        }
+
+                        //fontawesome icon
+                        i{   
+                            color: $primary;    
+                            margin: 1rem 0 2rem 0;  
+                            font-size: 3rem;
+                        } 
+
+                        //h2
+                        .card-title {
+                            font-size: 1rem;
+                        }       
+                    }
+}
+

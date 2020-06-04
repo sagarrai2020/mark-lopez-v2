@@ -1,0 +1,136 @@
+.experience{
+    padding: 100px 0 60px 0;
+    background: linear-gradient(90deg, $gray-200, #fff);
+
+    //h1
+    h2 {
+        margin-bottom: 4rem;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+    }
+
+    //h2
+    h3 {
+        font-size: 1rem;
+    }
+
+    //text-muted
+    p {
+        margin-top: 1rem;
+        line-height: 2rem;
+    }
+    
+
+    // ------ ul ---------------------------------------------
+
+                ul {
+                    list-style: none;
+                    margin: 0;
+                    padding: 0;
+                    position: relative;
+
+                    //ul before 
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        left: 10px;
+                        width: 0px;
+                        height: 100%;  
+                    }
+
+                    //li
+                    li {
+                    margin: 0px 20px 60px 60px;
+                    position: relative;
+
+                        //li span
+                        span {
+                            position: absolute;
+                            top: -10px;
+                            left: -50px;
+                            width: 0px;
+                            height: 100%;    
+                            //span before, span after
+                            &::before, &::after {
+                                content: '';
+                                width: 15px;
+                                height: 15px;   
+                                position: absolute;
+                                border-radius: 50%;
+                                left: -7px; 
+                                background: $white;
+                            }
+
+                            //span before
+                            &::before {
+                                top: -2px;
+                            }
+
+                            //span after
+                            &::after {
+                                top: 100%;
+                            }
+                        }
+                    }                
+                }
+
+                //education
+                .col-left {
+                    
+                    //h1
+                    h1, h2 {
+                        color: $info;
+                    }
+
+                    //h1 after
+                    h1::after {
+                        background: $info;
+                    }
+
+                    //ul before 
+                    ul::before { 
+                        border: 1px dashed $info; 
+                    }
+
+                    //li span
+                    li span{
+                        border: 1px solid $info; 
+                        
+                        //li span before, after
+                        &::before, &::after{
+                            border: 2px solid $info;  
+                        }
+                    }
+
+                }
+
+                //education
+                .col-right {
+                    //h1
+                    h1, h2 {
+                        color: $primary;
+                    }
+
+                    //h1 after
+                    h1::after {
+                        background: $primary;
+                    }
+
+                    //ul before 
+                    ul::before { 
+                        border: 1px dashed $primary; 
+                    }
+
+                    //li span
+                    li span{
+                        border: 1px solid $primary; 
+                        
+                        //li span::before
+                        &::before, &::after{
+                            border: 2px solid $primary;  
+                        }
+                    }
+                }
+ 
+}

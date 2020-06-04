@@ -1,0 +1,21 @@
+body {
+    overflow-x: hidden;
+    // overflow-y: hidden;
+    background: $light;
+}
+
+//h1 (apply this style to all h1 tags except home h1.name)
+h1:not(.name) {
+    font-size: 2rem;
+    text-transform: uppercase;
+    margin-bottom: 3.5rem;
+    //after
+    &::after {
+        content: '';
+        display: block;
+        width: 55px;
+        height: 2px;
+        background: $primary;
+        margin: 1rem 0 0 0;
+    }
+}

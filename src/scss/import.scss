@@ -1,0 +1,26 @@
+//import customize-bootstrap
+@import "./main/customize-bootstrap";
+
+//import all vender scss files
+@import "./vendor/bootstrap";
+@import "./vendor/google-font-face";
+@import "./vendor/fontawesome";
+@import "./vendor/owl-carousel/owl.carousel.scss";
+@import "./vendor/owl-carousel/owl.theme.default.scss";
+@import "./vendor/magnifiic-popup";
+
+
+//import custom scss files
+@import "./main/body";
+@import "./main/preloader";
+@import "./main/header";
+@import "./main/home";
+@import "./main/about";
+@import "./main/experience";
+@import "./main/portfolio";
+@import "./main/services";
+@import "./main/testimonials";
+@import "./main/blog";
+@import "./main/contact";
+@import "./main/footer";
+@import "./main/animate";

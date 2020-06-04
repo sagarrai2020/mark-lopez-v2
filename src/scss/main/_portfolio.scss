@@ -1,0 +1,117 @@
+.portfolio{
+    padding: 6.2rem 0;
+    background: $white;
+    
+    //h1
+    h1 {
+        text-align: center;
+        //h1::after
+        &::after {
+            margin: 15px auto;
+        }
+    }
+    
+    //li
+    li {      
+        cursor: pointer;   
+        padding-bottom: 10px;
+        text-transform: uppercase;
+        //small screen (from 350px to below)
+        @media  only screen and (max-width: 350px) {
+            font-size: 0.8rem;
+        }
+
+        // li:hover
+        &:hover {
+            color: $primary;
+        }
+    }
+        
+    //mixitup catetory list active
+    .mixitup-control-active {
+        color: $primary;
+        border-bottom: 2px solid $gray-300;
+    }
+
+    
+    // ------ portfolio-items ------------------------------
+                .portfolio-items {
+                    padding-top: 3.5rem;       
+
+                    //item
+                    .item {
+                        position: relative;
+                        overflow: hidden;
+                        cursor: pointer;
+                        margin-bottom: 0.5rem;
+                    
+                        //img
+                        img {
+                            width: 100%;
+                            transition: 0.8s ease-out; 
+                        }
+
+                        //overlay
+                        .overlay{
+                            position: absolute;
+                            bottom: 0;
+                            width: 100%;
+                            transition: 0.8s ease-out;
+                            background: rgba(255, 255, 255, 0.5);
+                            padding-top: 1rem;
+
+                            //overlay-inner                
+                            //h3
+                            h3 {
+                                font-size: 0.9rem;
+                                color: $dark;
+                                text-transform: uppercase;
+                                //small screen (from 576px to below)
+                                @media (max-width: 576px) {
+                                    font-size: 0.8rem;
+                                }
+                            }
+
+                            //p
+                            p{
+                                font-size: 0.8rem;
+                            }                             
+                        }
+
+                        //item:hover img
+                        &:hover img {
+                            transform: scale(1.2);
+                            -ms-transform: scale(1.2);
+                            -moz-transform: scale(1.2);
+                            -webkit-transform: scale(1.2);
+                        }
+
+                        //item:hover img
+                        &:hover .overlay {
+                            opacity: 0;               
+                        }
+                    }
+                }
+}
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
