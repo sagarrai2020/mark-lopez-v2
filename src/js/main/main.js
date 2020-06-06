@@ -370,9 +370,8 @@ import 'owl.carousel';
                     }
                 });
 
-
                 //form
-                var form = $('.contact-form');
+                var form = $('#ajax-contact');
 
                 //send message (Ajax)
                 $(form).on('submit', function(e) {
@@ -386,37 +385,41 @@ import 'owl.carousel';
                     //form data
                     var formData = $(form).serialize();
 
-                    // Submit the form using AJAX.                                   
+                    // Submit the form using AJAX.
                     $.ajax({
                         type: 'POST',
                         url: $(form).attr('action'),
                         data: formData
                     })
-                    //success
+
+                    //done
                     .done(function(response) {
-                        // Set the success message text.
-                        $("#submition-status").addClass("success slideInRight");
-                        $("#server-response").text(response);
-                        // Clear the form.
-                        $('#name').val('');
-                        $('#email').val('');
-                        $('#message').val('');
-                    })
-                     //error   
-                    .fail(function(data) {
-                        // Set the success message text.
-                        $("#submition-status").addClass("error slideInRight");
-                        if (data.responseText !== '') {
-                            $("#server-response").text(data.responseText);
-                        } else {
-                            $("#server-response").text('Oops! An error occured and your message could not be sent.');
+                        //show the success message on condition.
+                        if (response == 1) {
+                            $("#submition-status").addClass("success slideInRight");
+                            $("#server-response").text("Your message has been sent.");
+                        }else{
+                            $("#submition-status").addClass("error slideInRight");
+                            $("#server-response").text("Oops! There was a problem with your submission. Please complete the form and try again.");
                         }
-                    });
+                    })
+
+                    //fail
+                    .fail(function(data) {
+                        $("#submition-status").addClass("error slideInRight");
+                        $("#server-response").text("Oops! There was a problem with your submission. Please complete the form and try again.");
+                    })
+
+                    //complete
+                    .alwarys(function() {
+                        //alaways run after .done() and .fail()
+                        //do nothing here, this function is here to prevent multiple ajax request
+                    })
                    
                 });                                   
             }
 
-
+            
     
     // Window on Load
     $(window).on("load", function(){

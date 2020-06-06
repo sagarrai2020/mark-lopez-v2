@@ -24,7 +24,7 @@
         //(if image files are used in .scss files as background url() then no need to import here the scss loaders in webpack.config.js file will do the job)
 
         //import favicon image
-        import '../img/favicon/favicon-16x16.png';
+        import '../img/favicon/mark-lopez-favicon.png';
 
         //import logo png
         import '../img/logo/logo.png';

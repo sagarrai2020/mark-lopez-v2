@@ -23,7 +23,7 @@
         -->
         <link rel="stylesheet" href="./css/bundle.css">
         <!-- favicon  -->
-        <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon-16x16.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="./img/mark-lopez-favicon.png">
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -739,7 +739,7 @@
                         <!-- Contact form starts -->
                         <div class="contact-form-container">   
                             <!-- form -->
-                            <form class="contact-form" action="./mailer.php" method="POST">    
+                            <form id="ajax-contact" method="POST" action="mailer.php">    
 
                                 <!-- your name  -->
                                 <div class="div-name form-group"> 
@@ -761,7 +761,7 @@
 
                                 <!-- submit button  -->
                                 <div class="div-button form-group">						
-                                    <button type="submit" class="btn btn-primary py-2 btn-block animated" id="send-btn">SEND</button>
+                                    <button type="submit" name="submit" class="btn btn-primary py-2 btn-block animated" id="send-btn">SEND</button>
                                 </div>
 
                             </form>	 
